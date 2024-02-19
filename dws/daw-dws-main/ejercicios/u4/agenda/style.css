@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  font-family: Inter, 'Open Sans', Arial, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 2px solid black;
+  padding: 0.75rem;
+}
+
+form {
+  width: 29rem;
+}
+
+p {
+  text-align: center;
+}
+
+p,
+.campo {
+  margin: 1rem;
+}
+
+.campo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button,
+input,
+select {
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+}
+
+a,
+a:visited {
+  color: blue;
+}
+
+img {
+  width: 5rem;
+}

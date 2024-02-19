@@ -1,0 +1,40 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Vue.js</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <main>
+        <img 
+            v-for="persona in personas" 
+            :src="persona.picture.medium" 
+            :alt="persona.name.first">
+        <hr><hr>
+
+
+        
+        <select name="" id="" v-model="sexo">
+            <option value="Mr">Hombre</option>
+            <option value="Ms">Mujer</option>
+        </select>
+        <img 
+            v-for="persona in personasHM" 
+            :src="persona.picture.medium" 
+            :alt="persona.name.first">
+
+        <pre>{{ $data }}</pre>
+    </main>
+    <!-- Vue3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:focus,
+:focus-within {
+  outline: none;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: Inter, 'Open Sans', Arial, sans-serif;
+  font-size: 1.5rem;
+
+  min-height: 100vh;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  min-width: 11rem;
+  min-height: 3.25rem;
+}
+
+input {
+  padding: 0.75rem 1rem;
+}
+
+button,
+input {
+  font-size: 1.3rem;
+  border: 3px solid #b0b0b0;
+  border-radius: 12px;
+}
+
+#caja-pregunta {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+#pregunta {
+  text-align: center;
+  line-height: 1.15;
+  height: 3.5rem;
+}
+
+#caja-botones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+#caja-respuesta {
+  display: grid;
+  gap: 1rem;
+
+  grid-template-columns: 3fr 1fr;
+}
+
+.correcto {
+  border-color: #008000;
+  background-color: #00bb00;
+  color: white;
+}
+
+.incorrecto {
+  border-color: #800000;
+  background-color: #bb0000;
+  color: white;
+}

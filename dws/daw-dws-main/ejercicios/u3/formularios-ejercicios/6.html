@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>6</title>
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/hustcc/placeholder.js/master/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <h1>Datos Personales 6</h1>
+
+      <form action="visualizar-6.php" method="post">
+        <fieldset>
+          <legend>Formulario</legend>
+
+          <p>Escriba los siguientes datos:</p>
+
+          <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" minlength="2" required />
+          </div>
+
+          <div>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" id="apellidos" minlength="2" required />
+          </div>
+
+          <div>
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad" id="edad" min="18" required />
+          </div>
+
+          <div>
+            <label for="peso">Peso:</label>
+            <input type="number" name="peso" id="peso" min="1" required />
+            <label for="peso">kg</label>
+          </div>
+
+          <div>
+            <label>Sexo:</label>
+            <input type="radio" name="sexo" id="hombre" value="hombre" required />
+            <label for="hombre">Hombre</label>
+            <input type="radio" name="sexo" id="mujer" value="mujer" required />
+            <label for="mujer">Mujer</label>
+          </div>
+
+          <div>
+            <label>Estado civil:</label>
+            <input type="radio" name="estado" id="soltero" value="soltero" required />
+            <label for="soltero">Soltero</label>
+            <input type="radio" name="estado" id="casado" value="casado" required />
+            <label for="casado">Casado</label>
+            <input type="radio" name="estado" id="otro" value="otro" required />
+            <label for="otro">Otro</label>
+          </div>
+
+          <div>
+            <label>Aficiones:</label>
+            <input type="checkbox" name="aficiones[]" id="cine" value="cine" />
+            <label for="cine">Cine</label>
+            <input type="checkbox" name="aficiones[]" id="literatura" value="literatura" />
+            <label for="literatura">Literatura</label>
+            <input type="checkbox" name="aficiones[]" id="tebeos" value="tebeos" />
+            <label for="tebeos">Tebeos</label>
+            <input type="checkbox" name="aficiones[]" id="deporte" value="deporte" />
+            <label for="deporte">Deporte</label>
+            <input type="checkbox" name="aficiones[]" id="música" value="música" />
+            <label for="música">Música</label>
+            <input type="checkbox" name="aficiones[]" id="tv" value="tv" />
+            <label for="tv">TV</label>
+          </div>
+
+          <div>
+            <button type="submit">Enviar</button>
+            <button>Borrar</button>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>

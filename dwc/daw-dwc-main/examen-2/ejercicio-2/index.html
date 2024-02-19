@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ejercicio-2</title>
+
+    <link rel="stylesheet" href="./datos/Bootstrap/bootstrap.min.css" />
+
+    <script defer src="./datos/Axios/axios.min.js"></script>
+    <script defer src="./datos/VueJS/vue.global.min.js"></script>
+
+    <script defer src="./script.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <h1 class="text-center">CRUD de Pokémon</h1>
+
+      <form @submit="agregar" class="mx-auto w-25 mb-5">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre:</label>
+          <input type="text" name="nombre" id="nombre" class="form-control" v-model="nuevoNombre" />
+        </div>
+
+        <div class="mb-3">
+          <label for="tipo" class="form-label">Tipo:</label>
+          <input type="text" name="tipo" id="tipo" class="form-control" v-model="nuevoTipo" />
+        </div>
+
+        <div class="mb-3">
+          <label for="habilidad" class="form-label">Habilidad:</label>
+          <input type="text" name="habilidad" id="habilidad" class="form-control" v-model="nuevaHabilidad" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Agregar</button>
+      </form>
+
+      <form class="mx-auto w-25 mb-1">
+        <select name="type" id="type" v-model="filtroTipo" class="form-select">
+          <option value="">Todos</option>
+          <option v-for="(type) in types" :value="type">{{ type }}</option>
+        </select>
+      </form>
+
+      <table class="table table-striped container">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Habilidad</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr v-for="(pokemon, index) in listaFiltrada">
+            <td>{{ pokemon.name }}</td>
+            <td>{{ pokemon.type }}</td>
+            <td>{{ pokemon.ability }}</td>
+            <td><button @click="borrar(index)" class="btn btn-danger">X</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <pre>{{pokemonList}}</pre>
+    </main>
+  </body>
+</html>

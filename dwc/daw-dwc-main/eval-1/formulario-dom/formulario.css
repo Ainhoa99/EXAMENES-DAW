@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+body {
+  padding: 100px;
+}
+
+.container {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: auto;
+  background-color: #a9cef4;
+}
+
+.formulario label {
+  display: block;
+  font-weight: bold;
+}
+
+.formulario input,
+.formulario select {
+  padding: 5px;
+  width: 100%;
+  margin: 16px 0;
+}
+
+.informacion {
+  display: inline-block;
+}
+
+.error {
+  border: 3px solid red;
+}
+
+.oculto {
+  display: none;
+}

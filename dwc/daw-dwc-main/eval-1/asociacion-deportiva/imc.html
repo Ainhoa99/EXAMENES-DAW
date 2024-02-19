@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Asociación Deportiva</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script defer src="imc.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Asociación Deportiva</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="imc.html">IMC</a></li>
+        <li><a href="fcm.html">FCM</a></li>
+        <li><a href="categoria.html">Categoría</a></li>
+        <li><a href="horario.html">Horario</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Calculadora de Índice de Masa Corporal</h2>
+      <div>
+        <label for="altura">Altura (cm):</label>
+        <input type="number" name="altura" id="altura" />
+      </div>
+      <div>
+        <label for="peso">Peso (kg):</label>
+        <input type="number" name="peso" id="peso" />
+      </div>
+      <button id="calcular">Calcular</button>
+
+      <table>
+        <tr id="del-severa">
+          <td><16.00</td>
+          <td>Infrapeso (Delgadez severa)</td>
+        </tr>
+        <tr id="del-moderada">
+          <td>16.00 - 16.99</td>
+          <td>Infrapeso (Delgadez severa)</td>
+        </tr>
+        <tr id="del-aceptable">
+          <td>17.00 - 18.49</td>
+          <td>Infrapeso (Delgadez aceptable)</td>
+        </tr>
+        <tr id="normal">
+          <td>18.50 - 24.99</td>
+          <td>Peso normal</td>
+        </tr>
+        <tr id="sobrepeso">
+          <td>25.00 - 29.99</td>
+          <td>Sobrepeso</td>
+        </tr>
+        <tr id="obeso-i">
+          <td>30.00 - 34.99</td>
+          <td>Obeso (Tipo I)</td>
+        </tr>
+        <tr id="obeso-ii">
+          <td>35.00 - 40.00</td>
+          <td>Obeso (Tipo II)</td>
+        </tr>
+        <tr id="obeso-iii">
+          <td>>40.00</td>
+          <td>Obeso (Tipo III)</td>
+        </tr>
+      </table>
+    </main>
+
+    <footer>
+      <p>Augusto de la Cámara</p>
+    </footer>
+  </body>
+</html>

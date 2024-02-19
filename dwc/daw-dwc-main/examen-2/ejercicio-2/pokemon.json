@@ -1,0 +1,22 @@
+{
+  "count": 1118,
+  "next": "https://pokeapi.co/api/v2/pokemon?offset=25&limit=25",
+  "previous": null,
+  "results": [
+    { "name": "bulbasaur", "type": "plant", "ability": "Razor Leaf" },
+    { "name": "ivysaur", "type": "plant", "ability": "Seed Bomb" },
+    { "name": "charmeleon", "type": "fire", "ability": "Flamethrower" },
+    { "name": "charizard", "type": "fire", "ability": "Inferno" },
+    { "name": "squirtle", "type": "water", "ability": "Water Gun" },
+    { "name": "metapod", "type": "bug", "ability": "Harden" },
+    { "name": "butterfree", "type": "bug", "ability": "Stun Spore" },
+    { "name": "pidgeotto", "type": "flying", "ability": "Wing Attack" },
+    { "name": "pidgeot", "type": "flying", "ability": "Air Slash" },
+    { "name": "raticate", "type": "normal", "ability": "Tail Whip" },
+    { "name": "spearow", "type": "flying", "ability": "Peck" },
+    { "name": "fearow", "type": "flying", "ability": "Sky Attack" },
+    { "name": "ekans", "type": "poison", "ability": "Poison Sting" },
+    { "name": "arbok", "type": "poison", "ability": "Toxic" },
+    { "name": "pikachu", "type": "electric", "ability": "Thunder Shock" }
+  ]
+}

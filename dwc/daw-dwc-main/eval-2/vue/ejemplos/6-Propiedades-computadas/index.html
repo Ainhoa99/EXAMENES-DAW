@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Vue.js</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer src="js/main.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <h1>{{ mensaje }}</h1>
+      <!-- <h2>{{ mensaje.split('').reverse().join('')  }}</h2> -->
+
+      <h2>{{ mensajeAlReves }}</h2>
+
+      <ul>
+        <!-- Caso de no usaar propedades computadas -->
+        <!-- <li v-if="tarea.prioridad" v-for="tarea in tareas">
+                {{ tarea.titulo }} -->
+        <!-- <li v-for="tarea in tareasConPrioridad">
+                {{ tarea.titulo }}
+            </li> -->
+      </ul>
+
+      <ul>
+        <li v-for="tarea in tareasPorAntiguedad">{{ tarea.titulo }}</li>
+      </ul>
+
+      <form v-on:submit.prevent="agregarTarea">
+        <input type="text" placeholder="Introduce tu tarea" v-model="nuevaTarea" />
+        <input type="submit" value="Enviar tarea" />
+      </form>
+
+      <pre>{{ $data }}</pre>
+    </main>
+  </body>
+</html>

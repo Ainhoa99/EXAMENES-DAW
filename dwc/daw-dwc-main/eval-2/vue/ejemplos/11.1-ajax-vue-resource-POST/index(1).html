@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Vue.js</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+        <div id='vueapp'>
+            <div>
+                <p>
+                    Nombre: <input v-model="nombre" />
+                </p>
+                <p>
+                    Tel&eacute;fono: <input v-model="telefono" />
+                </p>
+                <p>
+                    <button v-on:click="enviar">Enviar</button>
+                </p>
+            </div>
+         
+            <h2>Listado de registros</h2>
+            <div>
+                <div v-for="r in regs">
+                    <div>{{ r.nombre }}, {{ r.telefono }}</div>
+                </div>
+            </div>
+            <pre>{{ $data }}</pre>
+        </div>
+    <!-- <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
+     -->
+
+    <script src="../Vue.min/vue.min.js"></script>
+    <script src="../Vue.min/vue-resource.min.js"></script>
+    <script src="js/main.js"></script>
+
+</html>

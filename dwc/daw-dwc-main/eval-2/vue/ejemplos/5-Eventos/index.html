@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Vue.js</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <main>
+      <ul>
+        <li v-for="tarea in tareas">{{ tarea }}</li>
+      </ul>
+      <!-- Con vanillaJavascript -->
+      <!-- <input type="text" placeholder="Introduce tu tarea">
+        <input type="button"  value="Enviar tarea" onclick="agregarTarea()"> -->
+
+      <!--1 Con Vuejs -->
+      <!-- <input type="text" placeholder="Introduce tu tarea" v-model="nuevaTarea" />
+      <input type="button" value="Enviar tarea" v-on:click="agregarTarea" /> -->
+
+      <!--2 Con Vuejs -->
+      <!-- <input type="text" placeholder="Introduce tu tarea" v-model="nuevaTarea" @keyup.enter="agregarTarea" /> -->
+
+      <!--3 Con Vuejs -->
+      <form v-on:submit.prevent="agregarTarea">
+        <input type="text" placeholder="Introduce tu tarea" v-model="nuevaTarea" />
+        <input type="submit" value="Enviar tarea" />
+      </form>
+
+      <pre>{{ $data }}</pre>
+    </main>
+
+    <!-- Vuejs 2 -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  -->
+
+    <!-- Vuejs 3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

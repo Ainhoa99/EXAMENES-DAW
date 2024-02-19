@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #f0f0f0;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Open Sans', Arial, sans-serif;
+
+  font-size: 1.25rem;
+}
+
+main,
+#caja-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+}
+
+p {
+  text-align: center;
+}
+
+button,
+input {
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+}
+
+#caja-principal {
+  gap: 0.5rem;
+}
+
+.caja {
+  width: 100%;
+
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error {
+  border-color: red;
+}

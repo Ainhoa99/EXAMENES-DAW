@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi formulario</title>
+    <style>
+      /* CSS para establecer el borde rojo alrededor de las imágenes */
+      .bordeRojo {
+        border: 3px solid red;
+      }
+    </style>
+
+    <script defer src="./script.js"></script>
+  </head>
+
+  <body>
+    <form>
+      <label for="matricula">Matrícula:</label>
+      <input type="text" id="matricula" name="matricula" pattern="[0-9]{4}-[a-z&&[^aeiou]]{3}" required />
+
+      <br />
+
+      <label for="tipo">Tipo:</label>
+      <select id="tipo" name="tipo">
+        <option value="motocicleta">Motocicleta</option>
+        <option value="automovil">Automóvil</option>
+        <option value="camion">Camión</option>
+      </select>
+
+      <br />
+
+      <img id="menorEdad" src="./img/menorEdad.png" alt="Menor de edad" width="100" height="100" style="display: none" />
+      <img id="mayorEdad" src="./img/mayorEdad.png" alt="Mayor de edad" width="100" height="100" style="display: none" />
+      <img id="particular" src="./img/particular.png" alt="Particular" width="100" height="100" style="display: none" />
+      <img id="profesional" src="./img/profesional.png" alt="Profesional de edad" width="100" height="100" style="display: none" />
+      <img id="rigido" src="./img/rigido.png" alt="Rígido" width="100" height="100" style="display: none" />
+      <img id="articulado" alt="Articulado" src="./img/articulado.png" width="100" height="100" style="display: none" />
+    </form>
+
+    <button id="submitBtn">Mostrar datos</button>
+
+    <div id="resultado"></div>
+  </body>
+</html>

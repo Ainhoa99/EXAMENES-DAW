@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f0f0f0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Inter, 'Open Sans', Arial, sans-serif;
+}
+
+main,
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+button,
+input {
+  padding: 0.25rem 0.5rem;
+}
+
+[class$='time'],
+input {
+  font-family: 'Cascadia Mono', monospace;
+  font-size: 1.5rem;
+}
+
+input {
+  width: 5ch;
+}

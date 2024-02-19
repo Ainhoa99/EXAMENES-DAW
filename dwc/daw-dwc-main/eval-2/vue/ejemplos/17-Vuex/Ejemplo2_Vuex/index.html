@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/vuex@4.0.2/dist/vuex.global.js"></script>
+
+    <div class="container" id="app">
+      <contador />
+    </div>
+    <script>
+      const { createApp } = Vue;
+      const { createStore, mapState, mapMutations } = Vuex;
+      const app = createApp({});
+
+      app.component('contador', {
+        template: `
+            <div>
+                <h2>Numero: {{ n }}</h2>
+                <button @click="increment">+</button>
+                <numero></numero>
+            </div>
+            `,
+        computed: {
+          ...mapState(['n']),
+        },
+        methods: {
+          ...mapMutations(['increment']),
+        },
+      });
+
+      app.component('numero', {
+        template: `
+                <div>
+                    <h2>Numero: {{ n }}</h2>
+                </div>
+                `,
+        computed: {
+          ...mapState(['n']),
+        },
+      });
+
+      const store = createStore({
+        state() {
+          return {
+            n: 0,
+          };
+        },
+        mutations: {
+          increment(state) {
+            state.n++;
+          },
+        },
+      });
+
+      app.use(store);
+      app.mount('#app');
+    </script>
+  </body>
+</html>

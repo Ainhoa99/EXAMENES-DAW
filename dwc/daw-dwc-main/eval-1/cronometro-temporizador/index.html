@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cronómetro | Temporizador</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <section class="cron">
+        <h1>Cronómetro</h1>
+        <p class="cron__time">
+          <span class="cron__h">00</span>
+          :
+          <span class="cron__m">00</span>
+          :
+          <span class="cron__s">00</span>
+        </p>
+        <div>
+          <button class="cron__iniciar">Iniciar</button>
+          <button class="cron__pausar" disabled>Pausar</button>
+          <button class="cron__reset" disabled>Reset</button>
+        </div>
+      </section>
+
+      <section>
+        <h1>Temporizador</h1>
+        <p class="temp__time">
+          <input type="number" class="temp__h" value="00" min="0" max="99"></input>
+          :
+          <input type="number" class="temp__m" value="00" min="0" max="59"></input>
+          :
+          <input type="number" class="temp__s" value="00" min="0" max="59"></input>
+        </p>
+        <div>
+          <button class="temp__iniciar">Iniciar</button>
+          <button class="temp__pausar" disabled>Pausar</button>
+          <button class="temp__reset" disabled>Reset</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

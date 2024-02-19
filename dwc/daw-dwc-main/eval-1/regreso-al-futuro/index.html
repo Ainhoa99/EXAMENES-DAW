@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>regreso al futuro</title>
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/hustcc/placeholder.js/master/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <p id="texto">Introduce las fechas</p>
+
+      <div id="caja-principal">
+        <div class="caja" id="caja-salida">
+          <label for="salida">Fecha salida:</label>
+          <input type="datetime-local" name="salida" id="salida" />
+        </div>
+        <div class="caja" id="caja-destino">
+          <label for="destino">Fecha destino:</label>
+          <input type="datetime-local" name="destino" id="destino" />
+        </div>
+      </div>
+
+      <button id="calcular">Calcular</button>
+    </main>
+  </body>
+</html>

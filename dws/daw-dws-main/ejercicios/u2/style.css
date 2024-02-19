@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: 'Arial';
+  font-size: 1.25rem;
+}
+
+body {
+  background-color: #f0f0f0;
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  max-width: 50vw;
+}
+
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+
+td {
+  padding: 0.25rem 0.5rem;
+}
+
+.num {
+  font-family: 'Cascadia Mono', Arial;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Introducción a Vuex</title>
+    <!-- Vue3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Vuex -->
+    <script src="https://unpkg.com/vuex@4.0.2/dist/vuex.global.js"></script>
+  </head>
+  <body>
+    <!-- <h2>Mediante Vuex, podemos tener los datos de los componentes vuejs de manera global y además manipularlos</h2> -->
+    <div id="app">
+      <titulo></titulo>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+      const { createStore, mapState, mapMutations } = Vuex;
+      // Create a Vue application
+      const app = createApp({});
+
+      app.component('titulo', {
+        //html
+        template: `
+            <div>
+                <h1>numero que leo desde la constante store {{$store.state.numero}}</h1>
+                <hijo></hijo>
+            </div>
+            `,
+      });
+
+      app.component('hijo', {
+        //html
+        template: `
+            <div>
+                <button @click="$store.commit('aumentar')">+</button>
+                <h1>numero que leo tb de store {{ $store.state.numero }}</h1>
+            </div>
+            `,
+      });
+
+      const store = createStore({
+        //esto es una zona donde se indicarán las variables que serán globales para todos los compnentes
+        state() {
+          return {
+            numero: 10, //esta variable es para todos los componentes
+          };
+        },
+        mutations: {
+          //aquí declaro funciones que estarán accesibles desde todos los componentes
+          aumentar() {
+            this.state.numero++;
+          },
+          /* aumentar(state){ si le paso como parametro state no hace falta que referencie con this. la variable
+                state.numero ++;
+            } */
+        },
+      });
+
+      app.use(store);
+      app.mount('#app');
+    </script>
+  </body>
+</html>

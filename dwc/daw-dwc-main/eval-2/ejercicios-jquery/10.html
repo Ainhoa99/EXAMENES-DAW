@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>10</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script defer>
+      $(() => {
+        const filas = $('tbody tr');
+        filas.even().css('background-color', 'red');
+        filas.odd().css('background-color', 'green');
+      });
+    </script>
+  </head>
+
+  <body class="center">
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>R1C1</td>
+            <td>R1C2</td>
+            <td>R1C3</td>
+          </tr>
+          <tr>
+            <td>R2C1</td>
+            <td>R2C2</td>
+            <td>R2C3</td>
+          </tr>
+          <tr>
+            <td>R3C1</td>
+            <td>R3C2</td>
+            <td>R3C3</td>
+          </tr>
+          <tr>
+            <td>R4C1</td>
+            <td>R4C2</td>
+            <td>R4C3</td>
+          </tr>
+          <tr>
+            <td>R5C1</td>
+            <td>R5C2</td>
+            <td>R5C3</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

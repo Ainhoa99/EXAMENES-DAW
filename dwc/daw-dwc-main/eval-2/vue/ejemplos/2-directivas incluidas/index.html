@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Vue.js</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <main>
+      <label for="check">conectado</label>
+      <input type="checkbox" id="check" name="check" v-model="conectado" />
+      <br />
+      <input type="range" id="rango" name="rango" min="1" max="220" v-model="edad" />
+      <label for="rango">{{ edad }}</label>
+
+      <h1 v-show="conectado">Aquí utilizo v-show</h1>
+      <!-- 1- Si está a false pone display:none, es decir sigue estando en el DOM -->
+
+      <h1 v-if="conectado">Aquí uso v-if</h1>
+      <!-- 2- Si está a false desaparece el elemento del DOM -->
+
+      <h2 v-if="edad < 18">No puedes entrar. Eres menor</h2>
+      <h2 v-else-if="edad > 200">Eres inmortal??.</h2>
+      <h2 v-else>Puedes entrar.</h2>
+
+      <template v-if="conectado">
+        <!-- Si lo metemos dentro de template afecta a todo lo que contiene -->
+        <h3>Bienvenido Txomin</h3>
+        <ul>
+          <li>
+            <a href="#">Mis datos</a>
+            <a href="#">Mensajes</a>
+          </li>
+        </ul>
+      </template>
+      <h4 v-else>No estás conectado, no ves el li :(</h4>
+
+      <pre> {{ $data}}</pre>
+    </main>
+
+    <!-- Vuejs 2 -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  -->
+
+    <!-- Vuejs 3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- <script src="../Vue.min/vue.min.js"></script> -->
+    <script src="../Vue.min/axios.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

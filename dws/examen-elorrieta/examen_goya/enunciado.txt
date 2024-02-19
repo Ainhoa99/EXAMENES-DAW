@@ -1,0 +1,55 @@
+Tienes disponible el fichero SQL goya2023.sql con las nominaciones de los premios goya 2023.
+Dispones también de un comprimido con los carteles de las películas
+
+Cuando termines sube tu trabajo a la carpeta final_febrero en tu cuenta del servidor.
+
+Como ya sabes, debe funcionar en el servidor. No se corregirá nada en local.
+
+------------------------
+ejercicio1: premios.php
+------------------------
+
+Proporciona dos desplegables: uno de categorías de premios y otro de películas.
+
+Si se selecciona una categoría:
+	Se mostrarán los nominados al premio en la misma, cada uno con el cartel de la película en la que trabaja.
+	Si no hay definido un ganador en ese momento, se verán todos igual.
+	Si ya hay ganador, debe utilizarse una clase css para distinguirlo. Puedes usar algún filtro de imagen para que los no ganadores se vean "un poco peor". Te recomiendo buscar inspiración en https://www.w3schools.com/cssref/playdemo.php?filename=playcss_filter&preval=grayscale(100%25)
+	
+Si se selecciona una película:
+	Se mostrará la lista de categorías a las que está nominada, haya ganado o no, con el nombre de los nominados. 
+	Se distinguirán visualmente las categorías en las que haya ganado.
+	Estas categorías en las que gana aparecerán las primeras.
+
+Intenta hacer un interfaz agradable que no cause confusión.
+
+-----------------------------------
+ejercicio2: modificar_premios.php
+-----------------------------------
+
+En la noche de los Goya queremos mantener nuestra página actualizada al segundo. Para eso creamos un interfaz sencillito.
+
+Se muestran todas las categorías con un botón "Modificar" a su lado.
+
+Al hacer click, se mostrará un diálogo modal que contenga unos botones de radio con los nominados a esa categoría. Si ya hay ganador, aparecerá marcado el botón correspondiente. Si no es así, estarán todos sin marcar. 
+
+El diálogo llevará incorporados botones de aceptar y cancelar. 
+Lógicamente, si se acepta se cambiará el ganador en la BBDD.
+Si te encuentras con que el navegador recuerda datos de tu formulario y no quieres eso, puedes intentar generar un evento reset desde javascript. Se podría usar autocomplete="off" pero en la referencia no pone que sirva para botones de radio.
+
+ANTES DE ENTREGAR deberías hacer el siguiente experimento:
+-En la categoría de mejor película iberoamericana, ponle el premio a Colombia.
+-Comprueba que realmente ha surtido efecto
+-Ahora resulta que te has confundido y se lo tienes que poner a Chile
+-Mira a ver qué hay en la BBDD
+
+--------------------------------------------------------------------------------
+ejercicio complementario: varios_ganadores
+--------------------------------------------------------------------------------
+Los dos ejercicios anteriores valen 10 puntos pero como todos nos equivocamos y la perfección no existe, aquí tienes la oportunidad de compensar los fallos que puedas haber cometido.
+
+Si decides resolver ese ejercicio súbelo a la carpeta final_febrero/varios_ganadores
+
+Adapta los ejercicios anteriores para que funciones bien con premios ex aequo. Es decir, que contemplen la posibilidad de que dos nominados estén tan igualados que se les dé el premio a los dos. Que permita más de un ganador, vaya.
+ 
+

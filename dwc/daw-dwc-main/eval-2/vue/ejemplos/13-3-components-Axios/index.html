@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Vue.js</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <main>
+    <!-- 1-Esta sería la forma de renderizar vista hasta ahora -->
+        <!-- <ul>
+            <li v-for="tarea in tareasAjax" v-text="tarea.title"></li>
+        </ul> -->
+
+    <!-- 2-Usando componentes que recogen los datos desde la instancia principal -->
+        <!-- <h1>Tareas Ajax</h1>
+            <Mistareas :tareas="tareasAjax"></Mistareas>
+        
+        <hr> -->
+
+        <!-- <h1>Tareas locales</h1>
+        <MisTareas :tareas="tareasLocales"></MisTareas> -->
+
+    <!-- 3-Tambien puedo usar un componente totalmente independiente que recoja sus propios datos -->
+        <h1>Las tareas desde el propio component</h1>
+        <Otrastareas></Otrastareas>
+
+        <pre>{{ $data }}</pre>
+    </main>
+    
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    
+    <!-- Vue3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    <script src="js/main.js"></script>
+</body>
+
+</html>

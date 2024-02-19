@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ejercicios vue 1-4</title>
+
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer src="1-4.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <h1>Hola mundo con Vue</h1>
+
+      <div>
+        <div class="campo">
+          <label for="fruta-nueva">Fruta nueva:</label>
+          <input type="text" placeholder="Fruta nueva" name="fruta-nueva" id="fruta-nueva" v-model="frutaNueva" @keyup.enter="agregarFrutaNueva" />
+        </div>
+
+        <button v-on:click="agregarFrutaNueva">Agregar</button>
+      </div>
+
+      <p>Total: {{ cantidadTotal }}</p>
+
+      <p>Frutas</p>
+      <ul>
+        <li v-for="fruta in frutas">
+          <input type="number" min="0" v-model="fruta.cantidad" />
+          <span>{{ fruta.nombre }}</span>
+          <span v-if="fruta.cantidad <= 0">- Sin stock</span>
+        </li>
+      </ul>
+
+      <hr />
+
+      <p>Frutas (min)</p>
+      <input type="range" min="0" max="25" name="min-cantidad" id="min-cantidad" v-model="minCantidad" />
+      <label for="min-cantidad">Mínimo seleccionado: {{ minCantidad }}</label>
+
+      <ul>
+        <li v-for="fruta in frutasMin">
+          <input type="number" min="0" v-model="fruta.cantidad" />
+          <span>{{ fruta.nombre }}</span>
+          <span v-if="fruta.cantidad <= 0">- Sin stock</span>
+        </li>
+      </ul>
+
+      <hr />
+
+      <p>Frutas (búsqueda)</p>
+      <label for="busqueda">Búsqueda:</label>
+      <input type="text" name="busqueda" id="busqueda" placeholder="Búsqueda" v-model="busqueda" />
+
+      <ul>
+        <li v-for="fruta in frutasBusqueda">
+          <span>{{ fruta.nombre }}</span>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>

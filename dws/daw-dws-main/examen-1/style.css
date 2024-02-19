@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family: Inter, 'Open Sans', Arial, sans-serif;
+  font-size: 1.15rem;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 3rem;
+
+  padding: 3rem 15rem;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 0.25rem 0.75rem;
+}
+
+header {
+  margin-bottom: auto;
+}
+
+main {
+  display: flex;
+
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+
+ul {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  list-style-type: none;
+}
+
+#inicio li {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+th,
+td,
+#inicio li {
+  border: 2px solid black;
+  padding: 1rem 2rem;
+}
+
+img {
+  max-width: 7.5rem;
+}
+
+form,
+table,
+footer {
+  width: max-content;
+  align-self: center;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: center;
+}
+
+fieldset {
+  border: 2px solid black;
+  padding: 1rem;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.campo {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+fieldset :is(button, a) {
+  align-self: center;
+}
+
+footer {
+  margin-top: auto;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}

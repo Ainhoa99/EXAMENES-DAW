@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vuex mapMutation</title>
+    <!-- Vue3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Vuex -->
+    <script src="https://unpkg.com/vuex@4.0.2/dist/vuex.global.js"></script>
+  </head>
+  <body>
+    <!-- <h2>Aquí vamos a ver como se puede mapear todas las mutaciones</h2> -->
+    <div id="app">
+      <titulo></titulo>
+    </div>
+
+    <script>
+      const {createApp} = Vue;
+      const {createStore, mapState, mapMutations} = Vuex;
+      // Create a Vue application
+      const app = createApp({});
+
+      app.component("titulo", {
+        template: //html
+         `
+            <div>
+                <h1>numero que leo desde la constante store {{numero}}</h1>
+                <hijo></hijo>
+            </div>
+            `,
+        computed: {
+          //2ª opcion mapeamos nuestra variables. Cuidado porque necesito meter un objeto dentro de otro. Por eso pongo ...Vuex.mapState
+          ...Vuex.mapState(["numero"]),
+        },
+      });
+      app.component("hijo", { 
+        template: //html
+        `
+            <div>
+                <button @click="aumentar">+</button><!--Como he mapeado la función,puedo acceder a ella directamente con elnombre-->
+                <button @click="disminuir(2)">-</button><!--Aquí llamo a la funcion disminuir, pero le envío un parametro 2, para que rest de 2 en 2-->
+                <h1>numero que leo tb de store {{ numero }}</h1>
+            </div>
+            `,
+        computed: {
+          //mapeamos nuestra variables de store. Cuidado porque necesito meter un objeto dentro de otro. Por eso pongo ...Vuex.mapState
+          ...Vuex.mapState(["numero"]),
+        },
+        methods: {
+          //como quiero mapear funciones, lo tengo que hacer dentro de methods
+          ...Vuex.mapMutations(["aumentar", "disminuir"]),
+        },
+      });
+
+      const store = createStore({
+        //esto es una zona donde se indicarán las variables que serán globales para todos los compnentes
+        state() {
+          return{numero: 10, //esta variable es para todos los componentes
+          }  
+        },
+        mutations: {
+          //aquí declaro funciones que estarán accesibles desde todos los componentes
+          aumentar() {
+            this.state.numero++;
+          },
+          disminuir(state, n) {
+            state.numero -= n;
+          },
+          /* aumentar(state){ si le paso como parametro state no hace falta que referencie con this. la variable
+                state.numero ++;
+            } */
+        },
+      });
+
+      app.use(store)
+      app.mount('#app')
+    </script>
+  </body>
+</html>

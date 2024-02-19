@@ -1,0 +1,29 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Vue.js</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <main>
+        <img 
+            v-for="persona in personas" 
+            v-bind:src="persona.picture.large" 
+            :alt="persona.name.first">
+        <pre>{{ $data }}</pre>
+    </main>
+    
+    <!-- Vue3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Vue-resource -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+    
+    <script src="js/main.js"></script>
+</body>
+
+</html>

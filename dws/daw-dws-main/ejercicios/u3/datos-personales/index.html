@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>base</title>
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/hustcc/placeholder.js/master/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <form action="visualizar.php" method="post">
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" minlength="2" required />
+      </div>
+
+      <div>
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" name="apellidos" id="apellidos" minlength="2" required />
+      </div>
+
+      <div>
+        <label for="correo">Correo:</label>
+        <input type="email" name="correo" id="correo" required />
+      </div>
+
+      <div>
+        <label for="edad">Edad:</label>
+        <input type="number" name="edad" id="edad" min="18" required />
+      </div>
+
+      <div>
+        <label>Nivel de inglés:</label>
+
+        <input type="radio" name="inglés" id="bajo" value="Bajo" required />
+        <label for="bajo">Bajo</label>
+
+        <input type="radio" name="inglés" id="medio" value="Medio" required />
+        <label for="medio">Medio</label>
+
+        <input type="radio" name="inglés" id="alto" value="Alto" required />
+        <label for="alto">Alto</label>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
