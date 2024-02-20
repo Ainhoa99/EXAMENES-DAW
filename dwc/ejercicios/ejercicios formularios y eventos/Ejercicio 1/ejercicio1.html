@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="ejercicio1.js"></script>
+    <title>From1</title>
+</head>
+<body>
+    <form action="" method="post">
+        <label for="nombre_disco">Nombre del disco:</label><br>
+        <input type="text" id="nombre_disco" name="nombre_disco" required><br><br>
+
+        <label for="grupo">Grupo de música o cantante:</label><br>
+        <input type="text" id="grupo" name="grupo" required><br><br>
+        
+        <label for="anno_publicacion">Año de publicación:</label><br>
+        <input type="number" id="anno_publicacion" name="anno_publicacion" min="1000" max="2100" required><br><br>
+        
+        <label for="tipo_musica">Tipo de música:</label><br>
+        <select id="tipo_musica" name="tipo_musica" required>
+          <option value="rock">Rock</option>
+          <option value="pop">Pop</option>
+          <option value="punk">Punk</option>
+          <option value="indie">Indie</option>
+        </select><br><br>
+        
+        <label for="localizacion">Localización:</label><br>
+        <input type="number" id="localizacion" name="localizacion" required><br><br>
+        
+        <label for="prestado">¿Prestado?</label><br>
+        <input type="checkbox" id="prestado" name="prestado" value="true"><br><br>
+        
+        <input type="submit" value="Validar" id="validar" />
+      </form>
+      
+</body>
+</html>
