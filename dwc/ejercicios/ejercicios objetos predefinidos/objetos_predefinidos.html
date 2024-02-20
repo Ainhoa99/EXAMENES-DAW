@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>OBJETOS PREDEFINIDOS EN JAVASCRIPT</h1>
+    <script type="text/javascript" src="functions.js"></script>
+    <script>
+        var opc;
+        do {
+            opc = prompt("1 - Ejercicio 1\n2 - Ejercicio 2\n3 - Ejercicio 3\n4 - Ejercicio 4\n5 - Ejercicio 5\n" +
+            "6 - Ejercicio 6\n7 - Ejercicio 7\n8 - Ejercicio 8\n9 - Ejercicio 9\n10 - Ejercicio 10\n11 - Salir");
+            switch (opc) {
+                case "1":
+                    diasNochevieja();
+                    break;
+                case "2":
+                    domingos();
+                    break;
+                case "3":
+                    formatoFechas();
+                    break;
+                case "4":
+                    formatoHoras();
+                    break;
+                case "5":
+                    cientifica();
+                    break;
+                case "6":
+                    circulo();
+                    break;
+                case "7":
+                    number();
+                    break;
+                case "8":
+                    nombreApellidos();
+                    break;
+                case "9":
+                    contraseña();
+                    break;
+                case "10":
+                    open("file:///C:/Users/liher/Desktop/ELORRIETA/DWEC/JS/3.1/ejercicio10.html","_blank","fullscreen=yes"); 
+                    opc = 11;
+                    break;
+                case "11":
+                    break;
+                default: 
+                    if (opc!==null)
+                        alert("No es una opción válida. Vuelva a elegir.");
+                    else
+                        opc = 11;
+            }
+        } while (opc != 11)
+    </script>
+</body>
+
+</html>
